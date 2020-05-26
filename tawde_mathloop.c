@@ -13,7 +13,7 @@ int main()
 char ch;
 int f, a= 10, b=20;
 float g;
-int x=5
+int x=5;
 
 
 while(x!=0)
