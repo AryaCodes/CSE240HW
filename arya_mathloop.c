@@ -12,7 +12,7 @@ void main()
 //Declaring and assigning variables;
 char ch;
 int a= 10, b=20;
-double f;
+float f;
 
 while(1)
 {
