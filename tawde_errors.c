@@ -24,7 +24,7 @@ int main(int argc, char** argv)
 
 	// Problem 1:
 	printf("Problem #%d\n", problem);
-	value = 50;
+	int value = 50;
 	printf("Integer value is %d\n", value);
 	// ****** IDENTIFY THE ERROR TYPE: Syntax, Context or Semantic
 	//The error here was syntax.
@@ -47,7 +47,7 @@ int main(int argc, char** argv)
 	// One third of 66 is 22, why is the program printing that a third of 66 is 0? Correct the error(s)(2 points)
 	printf("Problem #%d\n", problem);
 	int fullValue = 66;
-	printf("One-third of %d is %d\n", fullValue, fullValue/3));
+	printf("One-third of %d is %d\n", fullValue, fullValue/3);
 
 	// ****** IDENTIFY THE ERROR TYPE: Syntax, Context or Semantic
 	//1/3 evaluates to 0 intsead of 0.33 since integer values dont carry decimal values.
