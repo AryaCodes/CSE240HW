@@ -11,7 +11,8 @@ void main()
 {
 //Declaring and assigning variables;
 char ch;
-int f, a= 10, b=20;
+int a= 10, b=20;
+double f;
 
 while(1)
 {
@@ -27,7 +28,7 @@ switch (ch)
 {case '+': f = a + b; printf("f = %d\n", f); break;
 case '-': f = a - b; printf("f = %d\n", f); break; 
 case '*': f = a * b; printf("f = %d\n", f); break; 
-case '/': f = ((double)a / b); printf("f = %d\n", f); break;
+case '/': f = ((double)a / b); printf("f = %f\n", f); break;
 case '%': f = a%b;  printf("f = %d\n", f); break;
 case 'q': break;
 default: printf("invalid operator\n");  } 
