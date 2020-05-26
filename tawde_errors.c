@@ -21,6 +21,7 @@
 int main(int argc, char** argv)
 {
 	int problem = 0;
+	problem++;
 
 	// Problem 1:
 	printf("Problem #%d\n", problem);
@@ -119,6 +120,7 @@ int main(int argc, char** argv)
 	printf("Did you find it?\n");
 	// Problem 8: Did you notice it?
 	// There is another error in here ... look at your output... find it and fix it
+	//The problem counter was one behind!
 	// ****** IDENTIFY THE ERROR TYPE: Syntax, Context or Semantic
 	// Indicate your answer in the online quiz for Problem 8	
 
