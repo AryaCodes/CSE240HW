@@ -37,7 +37,7 @@ int main(int argc, char** argv)
 	// Numbers are numbers aren't they?  correct the error(s)(2 points)
 	printf("Problem #%d\n", problem);
 	float fractionalNumber = 5.5;
-	printf("Value: %f should be 5.5\n", fractionalNumber);
+	printf("Value: %.1f should be 5.5\n", fractionalNumber);
 	// ****** IDENTIFY THE ERROR TYPE: Syntax, Context or Semantic
 	//The error here was Semantic
 	// Indicate your answer in the online quiz for Problem 2
