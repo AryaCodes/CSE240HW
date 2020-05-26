@@ -27,8 +27,9 @@ switch (ch)
 {case '+': f = a + b; printf("f = %d\n", f); break;
 case '-': f = a - b; printf("f = %d\n", f); break; 
 case '*': f = a * b; printf("f = %d\n", f); break; 
-case '/': f = (1.0)*(a / b); printf("f = %d\n", f); break;
+case '/': f = ((double)a / b); printf("f = %d\n", f); break;
 case '%': f = a%b;  printf("f = %d\n", f); break;
+case 'q': break;
 default: printf("invalid operator\n");  } 
 
 if(ch == 'q')
