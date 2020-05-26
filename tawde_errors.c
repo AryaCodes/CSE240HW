@@ -24,9 +24,10 @@ int main(int argc, char** argv)
 
 	// Problem 1:
 	printf("Problem #%d\n", problem);
-	value = 50
+	value = 50;
 	printf("Integer value is %d\n", value);
 	// ****** IDENTIFY THE ERROR TYPE: Syntax, Context or Semantic
+	//The error here was syntax.
 	// Indicate your answer in the online quiz for Problem 1
 
 	problem++;
@@ -34,9 +35,10 @@ int main(int argc, char** argv)
 	// Problem 2: 
 	// Numbers are numbers aren't they?  correct the error(s)(2 points)
 	printf("Problem #%d\n", problem);
-	int fractionalNumber = 5.5;
+	float fractionalNumber = 5.5;
 	printf("Value: %f should be 5.5\n", fractionalNumber);
 	// ****** IDENTIFY THE ERROR TYPE: Syntax, Context or Semantic
+	//The error here was Semantic
 	// Indicate your answer in the online quiz for Problem 2
 
 	problem++;
@@ -45,16 +47,18 @@ int main(int argc, char** argv)
 	// One third of 66 is 22, why is the program printing that a third of 66 is 0? Correct the error(s)(2 points)
 	printf("Problem #%d\n", problem);
 	int fullValue = 66;
-	printf("One-third of %d is %d\n", fullValue, fullValue * (1 / 3));
+	printf("One-third of %d is %d\n", fullValue, fullValue/3));
 
 	// ****** IDENTIFY THE ERROR TYPE: Syntax, Context or Semantic
+	//1/3 evaluates to 0 intsead of 0.33 since integer values dont carry decimal values.
+	//The error here is 
 	// Indicate your answer in the online quiz for Problem 3
 	
 	problem++;
 	
 	// Problem 4: 
 	// Integer value intValue gets a value from the user or at least ... it should ... 
-	prnitf("Problem #%d\n", problem);
+	printf("Problem #%d\n", problem);
 	int amIWrong;
 	int intValue;
 	do
@@ -64,20 +68,23 @@ int main(int argc, char** argv)
 		if(amIWrong == 0) while ((getchar()) != '\n'); //clean up input stream
 	}while(amIWrong == 0);
 	// ****** IDENTIFY THE ERROR TYPE: Syntax, Context or Semantic
+	//The word print was spelled wrong.
 	// Indicate your answer in the online quiz for Problem 4
 	
 	problem++;
 	
 	//Problem 5:
 	// Having gotten a value from the user we want to see some info about it... shouldn't there be one message?
-	if (intValue = 100);
+	if (intValue == 100)
 		printf("x is equal to 100.\n");
-	if (intValue > 100);
+	else if (intValue > 100)
 		printf("x is greater than 100.\n");
-	if (intValue < 100);
+	else if (intValue < 100)
 		printf("x is less than 100.\n");
 
 	// ****** IDENTIFY THE ERROR TYPE: Syntax, Context or Semantic
+	//The error here was that id was used instead of else if and if had an incorrect semi-colon.
+	//The error here is
 	// Indicate your answer in the online quiz for Problem 5
 	
 	problem++;
@@ -87,12 +94,13 @@ int main(int argc, char** argv)
 	// This code should tell you that! Correct the error(s) (1 points).
 	printf("Problem #%d\n", problem);
 
-	if (intValue / 2 == 0)
+	if (intValue % 2 == 0)
 		printf("%d is an even number.\n", intValue);
-	if (intValue / 2 != 0)
+	if (intValue % 2 != 0)
 		printf("%d is an odd number.\n", intValue );
 
 	// ****** IDENTIFY THE ERROR TYPE: Syntax, Context or Semantic
+	// We simply had to use % instead of /, the correct operand.
 	// Indicate your answer in the online quiz for Problem 6	
 	problem++;
 	
@@ -100,9 +108,10 @@ int main(int argc, char** argv)
 	// This bit of code is meant to print "Hello World!". Correct the error(s) (2 points).
 	char message[] = "World!";
 	printf("Problem #%d\n", problem);
-	printf("Hello %d\n", message);
+	printf("Hello %s\n", message);
 
 	// ****** IDENTIFY THE ERROR TYPE: Syntax, Context or Semantic
+	// Print string instead of integer Semantic
 	// Indicate your answer in the online quiz for Problem 7	
 	problem++;
 
