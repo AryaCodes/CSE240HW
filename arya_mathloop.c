@@ -29,7 +29,7 @@ switch (ch)
 case '-': f = (double)a - b; printf("f = %d\n", f); break; 
 case '*': f = (double)a * b; printf("f = %d\n", f); break; 
 case '/': f = ((double)a / b); printf("f = %f\n", f); break;
-case '%': f = (double)a%b;  printf("f = %d\n", f); break;
+case '%': f = (double)a%(double)b;  printf("f = %d\n", f); break;
 case 'q': break;
 default: printf("invalid operator\n");  } 
 
