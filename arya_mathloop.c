@@ -29,8 +29,10 @@ case '-': f = a - b; printf("f = %d\n", f); break;
 case '*': f = a * b; printf("f = %d\n", f); break; 
 case '/': f = a / b; printf("f = %d\n", f); break;
 default: printf("invalid operator\n");  } 
-}
 
 if(ch == 'q')
-{break;}
+break;
+}
+
+
 }
