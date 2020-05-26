@@ -14,13 +14,9 @@ char ch;
 int f, a= 10, b=20;
 float g;
 
-//Showing the user the initial variables
-printf("a = 20 ; b = 20\n");
 
 while(1)
 {
-//Asking for input
-printf("Enter the command you want to do!\n+ adds\n- subtracts\n* multiplies\n/ divides\n%% gives remainder\nq quits\n");
 
 //Scanning the input and clearing the buffer afterwards.
 scanf("%c", &ch);
@@ -28,12 +24,10 @@ while((getchar())!= '\n');
 
 //Operating the switch appropriately
 switch (ch) 
-{case '+': f = a + b; printf("a + b = %d\n", f); break;
-case '-': f = a - b; printf("a - b = %d\n", f); break; 
-case '*': f = a * b; printf("a * b = %d\n", f); break; 
-case '/': g = ((double)a / b); printf("a / b = %f\n", g); break;
-case '%': f =  a%b;  printf("a %% b = %d\n", f); break;
-case 'q': break;
+{case '+': f = a + b; printf("f = %d\n", f); break;
+case '-': f = a - b; printf("f = %d\n", f); break; 
+case '*': f = a * b; printf("f = %d\n", f); break; 
+case '/': g = ((double)a / b); printf("f = %.2f\n", g); break;
 default: printf("invalid operator\n");  } 
 
 if(ch == 'q')
