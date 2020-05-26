@@ -16,11 +16,11 @@ int f, a= 10, b=20;
 while(1)
 {
 //Asking for input
-printf("Enter the command you want to do!\n+ adds\n- subtracts\n* multiplies\n/ divides\n%% gives remainder\n ");
+printf("Enter the command you want to do!\n+ adds\n- subtracts\n* multiplies\n/ divides\n%% gives remainder\nq quits ");
 
 //Scanning the input and clearing the buffer afterwards.
 scanf("%c", &ch);
-while((getchar())!= "\n");
+while((getchar())!= '\n');
 
 //Operating the switch appropriately
 switch (ch) 
@@ -31,5 +31,6 @@ case '/': f = a / b; printf("f = %d\n", f); break;
 default: printf("invalid operator\n");  } 
 }
 
-
+if(ch == 'q')
+{break;}
 }
