@@ -13,9 +13,10 @@ int main()
 char ch;
 int f, a= 10, b=20;
 float g;
+int x=5
 
 
-while(1)
+while(x!=0)
 {
 
 //Scanning the input and clearing the buffer afterwards.
@@ -30,8 +31,7 @@ case '*': f = a * b; printf("f = %d\n", f); break;
 case '/': g = ((double)a / b); printf("f = %.2f\n", g); break;
 default: printf("invalid operator\n");  } 
 
-if(ch == 'q')
-break;
+x--;
 }
 
 
