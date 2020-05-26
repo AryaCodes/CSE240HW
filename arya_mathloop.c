@@ -18,8 +18,9 @@ while(1)
 //Asking for input
 printf("Enter the command you want to do!\n+ adds\n- subtracts\n* multiplies\n/ divides\n%% gives remainder\n ");
 
-//Scanning the input
+//Scanning the input and clearing the buffer afterwards.
 scanf("%c", &ch);
+while((getchar())!= "\n");
 
 //Operating the switch appropriately
 switch (ch) 
