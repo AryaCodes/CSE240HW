@@ -1,5 +1,5 @@
 
-*/	CSE 40 Assignment 1: Math Loop
+/*	CSE 40 Assignment 1: Math Loop
 	Name: Arya Manish Tawde
 	Description: This program loops through user-inputted airthmatic operaters
 		     and performs them on pre-set integers, computes and displays the answer.
