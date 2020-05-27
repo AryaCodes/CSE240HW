@@ -11,7 +11,7 @@ int main(int argc, char** argv)
   for(i = 1; i <= 100; i++)
     {
       //I've made a change in the 100000 by reducing a zero because the program reuires generating random numbers between 1 and 10,000 in the assignment	
-      int value = (int)(frand() * 100000);
+      int value = (int)(frand() * 10000);
       printf("%6d ",value);
       if(i % 20 == 0) printf("\n");
     }
