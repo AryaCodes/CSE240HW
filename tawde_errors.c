@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+// Name: Arya Manish Tawde
 // CSE 240 Code with Errors
 // Before starting this assignment, please compile and run this program. 
 // You will first notice that the program will not compile. Fix the errors and define the error types.
@@ -28,7 +28,7 @@ int main(int argc, char** argv)
 	int value = 50;
 	printf("Integer value is %d\n", value);
 	// ****** IDENTIFY THE ERROR TYPE: Syntax, Context or Semantic
-	//The error here was syntax.
+	//The error here was syntax; added a semicolon.
 	// Indicate your answer in the online quiz for Problem 1
 
 	problem++;
@@ -39,7 +39,7 @@ int main(int argc, char** argv)
 	float fractionalNumber = 5.5;
 	printf("Value: %.1f should be 5.5\n", fractionalNumber);
 	// ****** IDENTIFY THE ERROR TYPE: Syntax, Context or Semantic
-	//The error here was Semantic
+	//The error here was Semantic, we had to change it to get appropriate display
 	// Indicate your answer in the online quiz for Problem 2
 
 	problem++;
@@ -52,7 +52,7 @@ int main(int argc, char** argv)
 
 	// ****** IDENTIFY THE ERROR TYPE: Syntax, Context or Semantic
 	//1/3 evaluates to 0 intsead of 0.33 since integer values dont carry decimal values.
-	//The error here is 
+	//The error here is semantic yet again!
 	// Indicate your answer in the online quiz for Problem 3
 	
 	problem++;
@@ -69,7 +69,7 @@ int main(int argc, char** argv)
 		if(amIWrong == 0) while ((getchar()) != '\n'); //clean up input stream
 	}while(amIWrong == 0);
 	// ****** IDENTIFY THE ERROR TYPE: Syntax, Context or Semantic
-	//The word print was spelled wrong.
+	//The word print was spelled wrong. Error was syntax.
 	// Indicate your answer in the online quiz for Problem 4
 	
 	problem++;
@@ -85,7 +85,7 @@ int main(int argc, char** argv)
 
 	// ****** IDENTIFY THE ERROR TYPE: Syntax, Context or Semantic
 	//The error here was that id was used instead of else if and if had an incorrect semi-colon.
-	//The error here is
+	//The error here is semantic!
 	// Indicate your answer in the online quiz for Problem 5
 	
 	problem++;
@@ -101,7 +101,7 @@ int main(int argc, char** argv)
 		printf("%d is an odd number.\n", intValue );
 
 	// ****** IDENTIFY THE ERROR TYPE: Syntax, Context or Semantic
-	// We simply had to use % instead of /, the correct operand.
+	// We simply had to use % instead of /, the correct operand. Semantic error?
 	// Indicate your answer in the online quiz for Problem 6	
 	problem++;
 	
@@ -112,7 +112,7 @@ int main(int argc, char** argv)
 	printf("Hello %s\n", message);
 
 	// ****** IDENTIFY THE ERROR TYPE: Syntax, Context or Semantic
-	// Print string instead of integer Semantic
+	// Print string instead of integer the problem was contextual.
 	// Indicate your answer in the online quiz for Problem 7	
 	problem++;
 
@@ -120,7 +120,7 @@ int main(int argc, char** argv)
 	printf("Did you find it?\n");
 	// Problem 8: Did you notice it?
 	// There is another error in here ... look at your output... find it and fix it
-	//The problem counter was one behind!
+	//The problem counter was one behind! Error is Semantic.
 	// ****** IDENTIFY THE ERROR TYPE: Syntax, Context or Semantic
 	// Indicate your answer in the online quiz for Problem 8	
 
