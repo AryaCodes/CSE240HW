@@ -10,7 +10,7 @@ int main(int argc, char** argv)
   int i;
   for(i = 1; i <= 100; i++)
     {
-      int value = (int)frand() * 1000000;
+      int value = (int)(frand() * 1000000);
       printf("%6d ",value);
       if(i % 20 == 0) printf("\n");
     }
