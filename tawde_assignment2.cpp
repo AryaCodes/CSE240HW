@@ -27,7 +27,7 @@ int main(int argc, char* argv[])
  
 	if(argc == 3)
 	{
-	fileName[] = argv[1];
+	fileName[0] = argv[1];
 	int x = isInt(argv[2]);
 	if(x==0)
 		cout<< "For number of names please enter a postive integer." << endl;
@@ -121,7 +121,7 @@ void miniGames(char fileName[], int noOfNames)
  	while(true)
 		{
 		cout<< "How many rounds should we play? (Choose an odd positive number)" << endl;
-		cin >> noofRounds;
+		cin >> noOfRounds;
 		
 		if(cin.fail())
 			{
@@ -145,7 +145,7 @@ void miniGames(char fileName[], int noOfNames)
 			continue;
 			}
 		}
-		tournament(compName, noOfRounds);
+		cout<<"Tournament"<< endl;
 	}
 
 char [] extractname(char b[], int a)
