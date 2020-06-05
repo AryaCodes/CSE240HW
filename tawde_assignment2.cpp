@@ -75,7 +75,7 @@ int menu()
 	}
 
 void miniGames()
-{cout<< "In MiniGames rolling d100:"<< randomInRange(1, 100)  << endl;}
+{cout<< "In MiniGames rolling d100:"<< randomInRange(1, 100)<< " " << randomInRange(1, 100)  << endl;}
 void macrosVFunction()
 {cout<<"In Macros rolling d6:" << randomInRange(1,6)<< endl;}
 
