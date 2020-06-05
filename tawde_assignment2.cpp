@@ -23,7 +23,7 @@ int main(int argc, char* argv[])
 		return 0;
 		}
 
-	char fileName[30];
+	char *fileName;
 	int noOfNames = 0;
  
 	if(argc == 3)
@@ -104,14 +104,14 @@ int menu()
 
 void miniGames(char fileName[], int noOfNames)
 	{
-	char compName[30]; 
+	char *compName; 
 	if(noOfNames!= 0)
 		{
-		compName[] = extractName(fileName, noOfNames);  
+		compName = extractName(fileName, noOfNames);  
 		}
 	else 
 		{
-		compName[] = extractName("default.txt", 100);;
+		compName = extractName("default.txt", 100);;
 		noOfNames = 100;
 		}
 
