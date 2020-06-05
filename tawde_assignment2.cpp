@@ -6,13 +6,13 @@
 using namespace std;
 
 int menu();
-void miniGames();
+void miniGames(char [], int);
 void macrosVFunction();
 int randomInRange( int, int);
-int isInt(char a[]);
+int isInt(char []);
 int charToInt(char b);
-int strToInt(char a[], int length);
-int powerCal(int base, int power);
+int strToInt(char [], int );
+int powerCal(int, int );
 
 int main(int argc, char* argv[])
 	{
@@ -21,7 +21,20 @@ int main(int argc, char* argv[])
 		cout << "Unsupported number of arguments." << endl;
 		return 0;
 		}
-	
+
+	char[30] fileName;
+	int noOfNames = 0;
+ 
+	if(argc == 3)
+	{
+	fileName = argv[0];
+	int x = isInt(argv[1]);
+	if(x==0)
+		cout<< "For number of names please enter a postive integer." << endl;
+	else
+		noOfNames = strToInt(argv[1], x);
+		
+	}
 
 
 	srand((unsigned)time(0)); 
@@ -31,7 +44,7 @@ int main(int argc, char* argv[])
 		switch(choice)
 			{
 			case 0: break;
-			case 1: miniGames();
+			case 1: miniGames(fileName, noOfNames);
 				break;
 			case 2: macrosVFunction();
 				break;
@@ -88,13 +101,57 @@ int menu()
 			return choice;
 	}
 
-void miniGames()
+void miniGames(char fileName[], int noOfNames)
 	{
+	char compName[30]; 
+	if(noOfNames!= 0)
+		{
+		compName[] = extractName(fileName, noOfNames);  
+		}
+	else 
+		{
+		compName[] = extractName("default.txt", 100);;
+		noOfNames = 100;
+		}
+
+	cout<< "Welcome to CSE240 Mini-Game Collection!"<< endl;
+	cout<< "I am your opponent " << compName << "."<< endl;
 	
+	int noOfRounds = 0;
+ 	while(true)
+		{
+		cout<< "How many rounds should we play? (Choose an odd positive number)" << endl;
+		cin >> noofRounds;
+		
+		if(cin.fail())
+			{
+			cin.clear();
+			cin.ignore(100, '\n');
+			cout<< "Enter a positive even INTEGER." << endl << endl;
+			continue;
+			}
+		
+		cin.ignore(100, '\n');
+		
+		if(noOfRounds<0)
+			{
+			cout<< "Enter a POSITIVE even integer." << endl << endl;
+			continue;
+			}
+
+		if(noOfRounds%2 != 0)
+			{
+			cout<< "Enter a poitive EVEN integer." << endl << endl;
+			continue;
+			}
+		}
+		tournament(compName, noOfRounds);
 	}
 
-
-
+char [] extractname(char b[], int a)
+	{
+	return "Arya";
+	}
 
 
 void macrosVFunction()
