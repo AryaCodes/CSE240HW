@@ -90,7 +90,7 @@ void miniGames()
 	if(x==0)
 		cout<< "Please enter an integer" << endl;
 	else
-		cout << strToInt(arr1, x) +1 << endl;
+		cout << (strToInt(arr1, x) + 1) << endl;
 	}
 
 
