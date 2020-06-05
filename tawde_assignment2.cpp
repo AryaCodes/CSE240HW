@@ -29,7 +29,7 @@ int main()
 int menu()
 	{
 	int choice = 0;
-	while(choice==0)
+	while(!choice)
 		{
 		cout<<"Welcome to CSE240 Assignment 2!"<< endl;
 		cout<<"Menu"<< endl;
@@ -71,6 +71,6 @@ int menu()
 	}
 
 void miniGames()
-{}
+{cout<< "In MiniGames" << endl;}
 void macrosVFunction()
-{}
+{cout<<"In Macros" << endl;}
