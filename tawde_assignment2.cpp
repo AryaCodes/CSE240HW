@@ -85,6 +85,12 @@ void miniGames()
 	{
 	char arr1[20];
 	cin >> arr1;
+	cin.ignore(100, '\n');
+	int x = isInt;
+	if(x==0)
+		cout<< "Please enter an integer" << endl;
+	else
+		cout << strToInt(arr1, x) +1 << endl;
 	}
 
 
