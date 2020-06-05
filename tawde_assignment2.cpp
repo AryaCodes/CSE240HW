@@ -11,6 +11,7 @@ int randomInRange( int, int);
 
 int main()
 	{
+	srand((unsigned)time(0));
 	while(1)
 		{
 		int choice = menu();
@@ -31,7 +32,7 @@ int main()
 
 int menu()
 	{
-	srand((unsigned)time(0));
+	
 	int choice = 0;
 	while(!choice)
 		{
