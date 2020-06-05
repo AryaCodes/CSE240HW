@@ -45,12 +45,12 @@ int menu()
 			{
 			cout<<"Enter an integer choice only!"<< endl << endl;
 			cin.clear();
-			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+			cin.ignore(100, '\n');
 			continue;
 			}
 		
 		cin.clear();
-		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+		cin.ignore(100, '\n');
 
 		switch(input)
 			{
