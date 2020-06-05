@@ -13,7 +13,7 @@ int isInt(char []);
 int charToInt(char b);
 int strToInt(char [], int );
 int powerCal(int, int );
-char *extractname(char b[], int a);
+char *extractName(char b[], int a);
 
 int main(int argc, char* argv[])
 	{
@@ -23,12 +23,12 @@ int main(int argc, char* argv[])
 		return 0;
 		}
 
-	char fileName[];
+	char fileName[30];
 	int noOfNames = 0;
  
 	if(argc == 3)
 	{
-	fileName[] = argv[1];
+	fileName = argv[1];
 	int x = isInt(argv[2]);
 	if(x==0)
 		cout<< "For number of names please enter a postive integer." << endl;
@@ -149,7 +149,7 @@ void miniGames(char fileName[], int noOfNames)
 		cout<<"Tournament"<< endl;
 	}
 
-char *extractname(char b[], int a)
+char *extractName(char b[], int a)
 	{
 	return b;
 	}
