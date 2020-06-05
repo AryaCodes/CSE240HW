@@ -127,7 +127,7 @@ int strToInt(char a[], int length)
 	int value = 0;
 	while(x <= length)
 		{
-		value += charToInt(a[x]) * powerCal(10, length -x);
+		value += charToInt(a[x]) * powerCal(10, length -x -1);
 		x++;
 		}		
 	return value;
