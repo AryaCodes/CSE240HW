@@ -1,6 +1,6 @@
 #include<cstdlib>
 #include<ctime>
-#inlcude<fstream>
+#include<fstream>
 #include<iostream>
 
 using namespace std;
