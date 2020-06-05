@@ -124,8 +124,8 @@ int strToInt(char a[], int length)
 	int value = 0;
 	while(x <= length)
 		{
-		cout<< "StrtoInt" << endl;
 		value += charToInt(a[x]) * powerCal(10, length -x);
+		x++;
 		}		
 	return value;
 	}
