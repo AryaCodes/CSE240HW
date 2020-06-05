@@ -81,5 +81,5 @@ void macrosVFunction()
 
 int randomInRange(int min, int max)
 	{
-	return (min + (rand() * (max + 1 -min)));
+	return (min + (rand()%(max + 1 -min)));
 	}
