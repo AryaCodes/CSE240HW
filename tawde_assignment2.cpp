@@ -29,7 +29,7 @@ int main()
 int menu()
 	{
 	int choice = 0;
-	while(!choice)
+	while(choice==0)
 		{
 		cout<<"Welcome to CSE240 Assignment 2!"<< endl;
 		cout<<"Menu"<< endl;
