@@ -14,7 +14,7 @@ int charToInt(char b);
 int strToInt(char a[], int length);
 int powerCal(int base, int power);
 
-int main(int argc, int arg)
+int main(int argc, char* argv[])
 	{
 	
 	srand((unsigned)time(0)); 
@@ -83,7 +83,8 @@ int menu()
 
 void miniGames()
 	{
-	
+	char arr1[];
+	cin >> arr1[] >> endl;
 	}
 
 
@@ -116,7 +117,7 @@ int strToInt(char a[], int length)
 	int value = 0;
 	while(x <= length)
 		{
-		value += charToInt(a[x]) * powerCal(10, length -x) 
+		value += charToInt(a[x]) * powerCal(10, length -x);
 		}		
 	return value;
 	}
