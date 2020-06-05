@@ -1,10 +1,13 @@
 #include<iostream>
+#include<cstdlib>
+#include<ctime>
 
 using namespace std;
 
 int menu();
 void miniGames();
 void macrosVFunction();
+int randomInRange( int, int);
 
 int main()
 	{
@@ -28,6 +31,7 @@ int main()
 
 int menu()
 	{
+	srand((unsigned)time(0));
 	int choice = 0;
 	while(!choice)
 		{
@@ -71,6 +75,11 @@ int menu()
 	}
 
 void miniGames()
-{cout<< "In MiniGames" << endl;}
+{cout<< "In MiniGames rolling d10:"<< randomInRange(1, 10)  << endl;}
 void macrosVFunction()
-{cout<<"In Macros" << endl;}
+{cout<<"In Macros rolling d6:" << randomInRange(1,6)<< endl;}
+
+int randomInRange(int min, int max)
+	{
+	return (min + (rand() * (max + 1 -min)));
+	}
