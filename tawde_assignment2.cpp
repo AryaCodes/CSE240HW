@@ -27,12 +27,12 @@ int main(int argc, char* argv[])
  
 	if(argc == 3)
 	{
-	fileName = argv[0];
-	int x = isInt(argv[1]);
+	fileName = argv[1];
+	int x = isInt(argv[2]);
 	if(x==0)
 		cout<< "For number of names please enter a postive integer." << endl;
 	else
-		noOfNames = strToInt(argv[1], x);
+		noOfNames = strToInt(argv[2], x);
 		
 	}
 
