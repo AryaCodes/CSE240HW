@@ -1,0 +1,76 @@
+#include<iostream>
+
+using namespace std;
+
+int menu();
+void miniGames();
+void macrosVFunction();
+
+int main()
+	{
+	while(1)
+		{
+		int choice = menu();
+		switch(choice)
+			{
+			case 0: break;
+			case 1: miniGames();
+				break;
+			case 2: macrosVFunction();
+				break;
+			default: cout<< "Something went very wrong."<< endl;
+			}
+		if(choice == 0)
+			break;
+		}
+	return 0;
+	}
+
+int menu()
+	{
+	int choice = 0;
+	while(!choice)
+		{
+		cout<<"Welcome to CSE240 Assignment 2!"<< endl;
+		cout<<"Menu"<< endl;
+		cout<<"1 - CSE240 Mini-Game Collection"<< endl;
+		cout<<"2 - Macros vs Functions Throw-down"<< endl;
+		cout<<"0 - Exit"<< endl;
+		cout<<"Choose an option: ";
+		
+		int input;
+		cin >> input;
+		
+		if(cin.fail())
+			{
+			cout<<"Enter an integer choice only!"<< endl << endl;
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+			continue;
+			}
+		
+		cin.clear();
+		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+		switch(input)
+			{
+			case 1: choice = 1;
+				break;
+			case 2: choice = 2;
+				break;
+			case 0: choice = 3;
+				break;
+			default: cout<< "Please enter a valid choice!"<< endl<< endl;
+			}
+		
+		}
+		if(choice==3)
+			return 0;
+		else
+			return choice;
+	}
+
+void miniGames()
+{}
+void macrosVFunction()
+{}
