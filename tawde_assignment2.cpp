@@ -16,7 +16,22 @@ int powerCal(int base, int power);
 
 int main(int argc, char* argv[])
 	{
-	
+	if(argc != 0 && argc != 2)
+		{
+		cout << "Unsupported number of arguments" << endl;
+		}
+//	char arr1[20];
+//	cin >> arr1;
+//	cin.ignore(100, '\n');
+//	int x = isInt(arr1);
+//	if(x==0)
+//		cout<< "Please enter an integer" << endl;
+//	else
+//		{
+//		int y = (strToInt(arr1, x) + 1);
+//		cout << y << endl;
+//		}
+
 	srand((unsigned)time(0)); 
 	while(1)
 		{
@@ -83,17 +98,7 @@ int menu()
 
 void miniGames()
 	{
-	char arr1[20];
-	cin >> arr1;
-	cin.ignore(100, '\n');
-	int x = isInt(arr1);
-	if(x==0)
-		cout<< "Please enter an integer" << endl;
-	else
-		{
-		int y = (strToInt(arr1, x) + 1);
-		cout << y << endl;
-		}
+	
 	}
 
 
