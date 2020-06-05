@@ -113,6 +113,7 @@ int isInt(char a[])
 		if( (a[x]<48) || (a[x]>57) )
 			return 0;	
 		x++;
+		cout<< "In isInt"<< endl; 
 		}
 	return x;	
 	}
@@ -149,6 +150,7 @@ int charToInt(char b)
 
 int powerCal(int base, int power)
 	{
+	cout<< "In power"<< endl;
 	if(power == 0)
 		return 1;
 	else
