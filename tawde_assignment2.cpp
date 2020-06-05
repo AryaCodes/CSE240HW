@@ -22,7 +22,7 @@ int main(int argc, char* argv[])
 		return 0;
 		}
 
-	char[30] fileName;
+	char fileName[30];
 	int noOfNames = 0;
  
 	if(argc == 3)
