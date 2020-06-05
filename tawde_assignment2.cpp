@@ -127,7 +127,7 @@ int strToInt(char a[], int length)
 	int value = 0;
 	while(x < length)
 		{
-		value += charToInt(a[x]) * powerCal(10, length -x -1);
+		value += charToInt(a[x]) * powerCal(10, length -(x+1));
 		x++;
 		}		
 	return value;
@@ -155,7 +155,7 @@ int charToInt(char b)
 int powerCal(int base, int power)
 	{
 	cout<< "In power"<< endl;
-	if(power == 0)
+	if(power <= 0)
 		return 1;
 	else
 		return (base * powerCal(base, (power-1))); 
