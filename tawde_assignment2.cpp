@@ -16,10 +16,12 @@ int powerCal(int base, int power);
 
 int main(int argc, char* argv[])
 	{
-	if(argc != 0 && argc != 2)
+	if(argc != 1 && argc != 3)
 		{
-		cout << "Unsupported number of arguments" << endl;
+		cout << "Unsupported number of arguments." << endl;
+		return 0;
 		}
+	char fileName = 
 //	char arr1[20];
 //	cin >> arr1;
 //	cin.ignore(100, '\n');
