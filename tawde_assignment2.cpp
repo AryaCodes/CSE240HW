@@ -145,6 +145,8 @@ void miniGames(char fileName[], int noOfNames)
 			cout<< "Enter a poitive EVEN integer." << endl << endl;
 			continue;
 			}
+		
+		break;
 		}
 		cout<<"Tournament"<< endl;
 	}
