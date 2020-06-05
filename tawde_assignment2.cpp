@@ -83,8 +83,8 @@ int menu()
 
 void miniGames()
 	{
-	char arr1[];
-	cin >> arr1[] >> endl;
+	char arr1[20];
+	cin >> arr1 >> endl;
 	}
 
 
