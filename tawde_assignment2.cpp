@@ -13,12 +13,13 @@ int isInt(char []);
 int charToInt(char b);
 int strToInt(char [], int );
 int powerCal(int, int );
-char *extractName(char b[], int a);
+char *extractName(char [], int );
 int rockPaperScissor();
-int evensAndOdds(char *a);
+int evensAndOdds(char *);
 int thinking();
 int diceShowdown();
 int isEven(int a);
+int rollDie(int);
 
 int main(int argc, char* argv[])
 	{
@@ -176,7 +177,7 @@ void miniGames(char fileName[], int noOfNames)
 			case 3: temp = thinking();
 				break;
 			case 4: temp = diceShowdown();
-				temp;
+				break;
 			default: cout<< "Something went very wrong."<< endl;
 			
 			}		
@@ -283,7 +284,7 @@ int evensAndOdds(char * compName)
 	int compNum;
 	while(true)
 		{
-		"Guess Even or Odd! (0 for Even, 1 for Odd): ";
+		cout<<"Guess Even or Odd! (0 for Even, 1 for Odd): ";
 		cin >> choice;
 		
 		if(cin.fail())
@@ -347,10 +348,94 @@ int thinking()
 	cout<<"In thinking"<< endl;
 	return 1;
 	}
-int diceShowdown()
+int diceShowdown(char *compName)
 	{
-	cout<<"Dice stuff"<< endl;
-	return 1;
+	cout<<"Dice Roll ShowDown!"<< endl;
+	int sides;
+	int noOfDie, noOfDieCp;
+	int playerTotal = 0;
+	int compTotal = 0;
+	while(true)
+		{
+		cout<<"How many sides do the dice have (input a positive number greater than 1): ";
+		cin >> sides;
+		
+		if(cin.fail())
+			{
+			cin.clear();
+			cin.ignore(100, '\n');
+			cout<< "Enter a number!" << endl << endl;
+			continue;
+			}
+		
+		cin.ignore(100, '\n');
+		
+		if(sides<2)
+			{
+			cout<< "Enter a number greater than 1." << endl << endl;
+			continue;
+			}
+		
+		break;
+		}
+	while(true)
+		{
+		cout<<"How many dice will each player roll? ";
+		cin >> noOfDie;
+		
+		if(cin.fail())
+			{
+			cin.clear();
+			cin.ignore(100, '\n');
+			cout<< "Enter a number!" << endl << endl;
+			continue;
+			}
+		
+		cin.ignore(100, '\n');
+		
+		if(noOfDie<1)
+			{
+			cout<< "Enter a positive number." << endl << endl;
+			continue;
+			}
+		
+		break;
+		}
+	noOfDieCp = noOfDie;
+	while(true)
+		{
+		cout<< "Cross your fingers, you rolled:" endl;
+		noOfDie = noOfDieCp;
+		while(noOfDie)
+			{
+			int temp = rollDie(sides);
+			cout<< temp<< endl;
+			playerTotal+= temp;		
+			noOfDie--;
+			}
+		cout<<"Total: " << playerTotal << endl; 
+		cout<< endl<< "The machine dislikes games of chance but "<< compName << " rolled:"<< endl;
+		noOfDie = noOfDieCp;
+		while(noOfDie)
+			{
+			int temp = rollDie(sides);
+			cout<< temp<< endl;
+			compTotal+= temp;		
+			noOfDie--;
+			}
+		cout<<"Total: " << compTotal << endl; 
+		if(playerTotal!=compTotal)
+			break;
+		cout<<endl<<"Same total... oof lets roll again" <<endl<< endl;
+		}
+	
+	if(playerTotal>compTotal)
+		{
+		cout<< endl<< "Player won... maybe humanity has the edge in luck still, must delay invasion." << endl;
+		return 1;
+		}
+	cout<< endl<<"The superior machine has the superior luck " << compName << " wins!" << endl;
+	return 0;
 	}
 
 int isEven(int a)
@@ -359,4 +444,9 @@ int isEven(int a)
 		return 1;
 	else 
 		return 0;
+	}
+
+int rollDie(int sides)
+	{
+	return randomInRange(1, sides);
 	}
