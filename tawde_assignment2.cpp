@@ -171,7 +171,7 @@ void miniGames(char fileName[], int noOfNames)
 			{
 			case 1: temp = rockPaperScissor();
 				break;
-			case 2: temp = evensAndOdds();
+			case 2: temp = evensAndOdds(compName);
 				break;
 			case 3: temp = thinking();
 				break;
