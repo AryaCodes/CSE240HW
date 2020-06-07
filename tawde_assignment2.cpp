@@ -336,8 +336,8 @@ int evensAndOdds(char * compName)
 		cout<< playerNum << "+" << compNum << " = " << (compNum+playerNum) << " -ODD"<< endl;
 
 	if(isEven((compNum+playerNum)) == (!choice))
-		cout<< "The player won this round... the AI will process and evolve."<< endl;
-		return 1;
+		{cout<< "The player won this round... the AI will process and evolve."<< endl;
+		return 1;}
 	else
 		cout<< compName  << " won this round. One step closer to true intelligence for the machine."<< endl;
 		return 0;
