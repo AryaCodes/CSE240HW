@@ -271,16 +271,20 @@ int powerCal(int base, int power)
 int rockPaperScissor()
 	{	
 	cout<<"In rock paper."<< endl;	
+	return 1;
 	}
 int evensAndOdds()
 	{
 	cout<< "In even odd"<< endl;
+	return 1;
 	}
 int thinking()
 	{
 	cout<<"In thinking"<< endl;
+	return 1;
 	}
 int diceShowdown()
 	{
 	cout<<"Dice stuff"<< endl;
+	return 1;
 	}
