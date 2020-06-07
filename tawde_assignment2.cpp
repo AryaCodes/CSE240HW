@@ -14,6 +14,10 @@ int charToInt(char b);
 int strToInt(char [], int );
 int powerCal(int, int );
 char *extractName(char b[], int a);
+int rockPaperScissor();
+int evensAndOdds();
+int thinking();
+int diceShowdown();
 
 int main(int argc, char* argv[])
 	{
@@ -136,19 +140,65 @@ void miniGames(char fileName[], int noOfNames)
 		
 		if(noOfRounds<0)
 			{
-			cout<< "Enter a POSITIVE even integer." << endl << endl;
+			cout<< "Enter a POSITIVE odd integer." << endl << endl;
 			continue;
 			}
-
-		if(noOfRounds%2 != 0)
+		
+		if(noOfRounds%2 == 0)
 			{
-			cout<< "Enter a poitive EVEN integer." << endl << endl;
+			cout<< "Enter a poitive ODD integer." << endl << endl;
 			continue;
 			}
 		
 		break;
 		}
-		cout<<"Tournament"<< endl;
+		
+	int round = 1;
+	int playerScore = 0;
+	int compScore=0;
+	int randomGame= 0;
+	int temp = 0;
+		
+	while(true)
+		{
+		cout<<"Player Score: " << playerScore << "\tComp Score: " << compScore<< endl;
+		cout<<"Round " << round << endl;
+		
+		randomGame = randomInRange(1,4);
+
+		switch(randomGame)
+			{
+			case 1: temp = rockPaperScissor();
+				break;
+			case 2: temp = evensAndOdds();
+				break;
+			case 3: temp = thinking();
+				break;
+			case 4: temp = diceShowdown();
+				temp;
+			default: cout<< "Something went very wrong."<< endl;
+			
+			}		
+		compScore += !temp;
+		playerScore += temp;	
+		
+		if(compScore > ((noOfRounds)/2)||playerScore > ((noOfRounds)/2))
+			break;
+
+		round++;
+		}
+
+	if(playerScore>compScore)
+		{
+		cout<<"Player Score: " << playerScore << "\tComp Score: " << compScore<< endl;
+		cout<< "Player has won the mini-games! Time to celebrate?" << endl<< endl;
+		}
+	else
+		{
+		cout<<"Player Score: " << playerScore << "\tComp Score: " << compScore<< endl;
+		cout<< compName<< " has won the mini-games! I will sleep a happy AI tonight!" << endl<< endl;
+		}
+		
 	}
 
 char *extractName(char b[], int a)
@@ -216,4 +266,21 @@ int powerCal(int base, int power)
 		return 1;
 	else
 		return (base * powerCal(base, (power-1))); 
+	}
+
+int rockPaperScissor()
+	{	
+	cout<<"In rock paper."<< endl;	
+	}
+int evensAndOdds()
+	{
+	cout<< "In even odd"<< endl;
+	}
+int thinking()
+	{
+	cout<<"In thinking"<< endl;
+	}
+int diceShowdown()
+	{
+	cout<<"Dice stuff"<< endl;
 	}
