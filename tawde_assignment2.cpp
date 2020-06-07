@@ -404,7 +404,7 @@ int diceShowdown(char *compName)
 	noOfDieCp = noOfDie;
 	while(true)
 		{
-		cout<< "Cross your fingers, you rolled:" endl;
+		cout<< "Cross your fingers, you rolled:" <<endl;
 		noOfDie = noOfDieCp;
 		while(noOfDie)
 			{
