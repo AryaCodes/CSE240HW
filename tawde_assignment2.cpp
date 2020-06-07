@@ -15,7 +15,7 @@ int strToInt(char [], int );
 int powerCal(int, int );
 char *extractName(char b[], int a);
 int rockPaperScissor();
-int evensAndOdds();
+int evensAndOdds(char *a);
 int thinking();
 int diceShowdown();
 int isEven(int a);
@@ -331,15 +331,16 @@ int evensAndOdds(char * compName)
 	cout << compName << " held up " << compNum << " fingers."<< endl; 
 	
 	if(isEven((compNum+playerNum)))
-		cout<< playerNum << "+" << compNum << " = " << (compName+playerName) << " -EVEN"<< endl;
+		cout<< playerNum << "+" << compNum << " = " << (compNum+playerNum) << " -EVEN"<< endl;
 	else
-		cout<< playerNum << "+" << compNum << " = " << (compName+playerName) << " -ODD"<< endl;
+		cout<< playerNum << "+" << compNum << " = " << (compNum+playerNum) << " -ODD"<< endl;
 
 	if(isEven((compNum+playerNum)) == (!choice))
 		cout<< "The player won this round... the AI will process and evolve."<< endl;
 		return 1;
 	else
 		cout<< compName  << " won this round. One step closer to true intelligence for the machine."<< endl;
+		return 0;
 	}
 int thinking()
 	{
