@@ -16,7 +16,7 @@ int powerCal(int, int );
 char *extractName(char [], int );
 int rockPaperScissor();
 int evensAndOdds(char *);
-int thinking();
+int thinking(char *);
 int diceShowdown(char *);
 int isEven(int a);
 int rollDie(int);
@@ -117,7 +117,7 @@ void miniGames(char fileName[], int noOfNames)
 		}
 	else 
 		{
-		compName = extractName("default.txt", 100);;
+		compName = extractName("random_name.txt", 100);;
 		noOfNames = 100;
 		}
 
@@ -174,7 +174,7 @@ void miniGames(char fileName[], int noOfNames)
 				break;
 			case 2: temp = evensAndOdds(compName);
 				break;
-			case 3: temp = thinking();
+			case 3: temp = thinking(compName);
 				break;
 			case 4: temp = diceShowdown(compName);
 				break;
@@ -272,10 +272,92 @@ int powerCal(int base, int power)
 
 int rockPaperScissor()
 	{	
-	cout<<"In rock paper."<< endl;	
-	return 1;
+	cout<<"Rock, Paper, Scissors game!"<< endl;	
+	while(true)
+		{
+		cout<< "Choose a throw!<< endl;
+		cout<< "1.Rock"<< endl << "2.Paper"<< endl << "3.Scissor"<< endl;
+		int choice;
+		while(true)
+			{
+			cout<< "1.Rock"<< endl << "2.Paper"<< endl << "3.Scissor"<< endl;
+			cin >> choice;
+		
+			if(cin.fail())
+				{
+				cin.clear();
+				cin.ignore(100, '\n');
+				cout<< "Incorrect input"<< endl << endl;
+				continue;
+				}
+			
+			cin.ignore(100, '\n');
+			
+			if(choice>3||choice<1)
+				{
+				cout<< "Incorrect input" << endl << endl;
+				continue;
+				}
+		
+			break;
+			}
+		int compChoice = randomInRange(1,3);
+		if(choice == compChoice)
+			{
+			switch(choice)
+				{
+				case 1: cout<< "Both threw Rock!"<< endl;
+					break;
+				case 2: cout<< "Both threw Paper!<< endl;
+					break;
+				case 3: cout<< "Both threw Scissors!"<< endl;
+					break;
+				}
+			cout<< "Lets play again!" << endl;
+			continue;	
+			}
+		if(choice == 1)
+			{
+			if(compChoice == 2)
+				{
+				cout<< "Player threw Rock, I threw Paper. I win!" << endl;
+				return 0;
+				}
+			else
+				{
+				cout<< "Player threw Rock, I threw Scissor. You win!...Analysing behavorial Patterns." << endl;
+				return 1;
+				}
+			}
+		if(choice == 2)
+			{
+			if(compChoice == 3)
+				{
+				cout<< "Player threw Paper, I threw Scissor. I win!" << endl;
+				return 0;
+				}
+			else
+				{
+				cout<< "Player threw Paper, I threw Rock. You win!...Analysing behavorial Patterns." << endl;
+				return 1;
+				}
+			}
+		if(choice == 3)
+			{
+			if(compChoice == 1)
+				{
+				cout<< "You threw Scissor, I threw Rock. I win!" << endl;
+				return 0;
+				}
+			else
+				{
+				cout<< "You threw Scissor, I threw Paper. You win!...Analysing behavorial Patterns." << endl;
+				return 1;
+				}
+			}
+		}
 	}
-int evensAndOdds(char * compName)
+int evensAndOdds(char *compName)
 	{
 	cout<< "Even/Odd Game"<< endl;
 	
@@ -343,7 +425,7 @@ int evensAndOdds(char * compName)
 		cout<< compName  << " won this round. One step closer to true intelligence for the machine."<< endl;
 		return 0;
 	}
-int thinking()
+int thinking(char *compName)
 	{
 	cout<<"In thinking"<< endl;
 	return 1;
