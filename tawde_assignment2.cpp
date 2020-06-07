@@ -176,7 +176,7 @@ void miniGames(char fileName[], int noOfNames)
 				break;
 			case 3: temp = thinking();
 				break;
-			case 4: temp = diceShowdown();
+			case 4: temp = diceShowdown(compName);
 				break;
 			default: cout<< "Something went very wrong."<< endl;
 			
