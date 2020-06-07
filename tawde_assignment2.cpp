@@ -275,7 +275,7 @@ int rockPaperScissor()
 	cout<<"Rock, Paper, Scissors game!"<< endl;	
 	while(true)
 		{
-		cout<< "Choose a throw!<< endl;
+		cout<< "Choose a throw!"<< endl;
 		cout<< "1.Rock"<< endl << "2.Paper"<< endl << "3.Scissor"<< endl;
 		int choice;
 		while(true)
@@ -308,7 +308,7 @@ int rockPaperScissor()
 				{
 				case 1: cout<< "Both threw Rock!"<< endl;
 					break;
-				case 2: cout<< "Both threw Paper!<< endl;
+				case 2: cout<< "Both threw Paper!"<< endl;
 					break;
 				case 3: cout<< "Both threw Scissors!"<< endl;
 					break;
