@@ -18,12 +18,13 @@ int rockPaperScissor();
 int evensAndOdds();
 int thinking();
 int diceShowdown();
+int isEven(int a);
 
 int main(int argc, char* argv[])
 	{
 	if(argc != 1 && argc != 3)
 		{
-		cout << "Unsupported number of arguments." << endl;
+		cout << "Unsupported number of arguments. Will use default file for AI Name." << endl;
 		return 0;
 		}
 
@@ -161,7 +162,7 @@ void miniGames(char fileName[], int noOfNames)
 		
 	while(true)
 		{
-		cout<<"Player Score: " << playerScore << "\tComp Score: " << compScore<< endl;
+		cout<<"Player Score: " << playerScore << "\t\tComp Score: " << compScore<< endl;
 		cout<<"Round " << round << endl;
 		
 		randomGame = randomInRange(1,4);
@@ -273,10 +274,72 @@ int rockPaperScissor()
 	cout<<"In rock paper."<< endl;	
 	return 1;
 	}
-int evensAndOdds()
+int evensAndOdds(char * compName)
 	{
-	cout<< "In even odd"<< endl;
-	return 1;
+	cout<< "Even/Odd Game"<< endl;
+	
+	int choice;
+	int playerNum;
+	int compNum;
+	while(true)
+		{
+		"Guess Even or Odd! (0 for Even, 1 for Odd): ";
+		cin >> choice;
+		
+		if(cin.fail())
+			{
+			cin.clear();
+			cin.ignore(100, '\n');
+			cout<< "Enter 0 or 1" << endl << endl;
+			continue;
+			}
+		
+		cin.ignore(100, '\n');
+		
+		if(choice!=0&&choice!=1)
+			{
+			cout<< "Enter 0 or 1" << endl << endl;
+			continue;
+			}
+		
+		break;
+		}
+	while(true)
+		{
+		cout<<"Enter the number of fingers you want to hold up(0 to 5):";
+		cin >> playerNum;
+		
+		if(cin.fail())
+			{
+			cin.clear();
+			cin.ignore(100, '\n');
+			cout<< "A person has five fingers, lets be realistic!" << endl << endl;
+			continue;
+			}
+		
+		cin.ignore(100, '\n');
+		
+		if(playerNum<0||playerNum>5)
+			{
+			cout<< "A person has five fingers, lets be realistic!" << endl << endl;
+			continue;
+			}
+		
+		break;
+		}
+	compNum = randomInRange(0,5);
+	cout << compName << " held up " << compNum << " fingers."<< endl; 
+	
+	if(isEven((compNum+playerNum)))
+		cout<< playerNum << "+" << compNum << " = " << (compName+playerName) << " -EVEN"<< endl;
+	else
+		cout<< playerNum << "+" << compNum << " = " << (compName+playerName) << " -ODD"<< endl;
+
+	if(isEven((compNum+playerNum)) == (!choice))
+		cout<< "The player won this round... the AI will process and evolve."<< endl;
+		return 1;
+	else
+		cout<< compName  << " won this round. One step closer to true intelligence for the machine."<< endl;
 	}
 int thinking()
 	{
@@ -287,4 +350,12 @@ int diceShowdown()
 	{
 	cout<<"Dice stuff"<< endl;
 	return 1;
+	}
+
+int isEven(int a)
+	{
+	if(a%2==0)
+		return 1;
+	else 
+		return 0;
 	}
