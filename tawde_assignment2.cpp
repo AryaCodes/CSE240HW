@@ -17,7 +17,7 @@ char *extractName(char [], int );
 int rockPaperScissor();
 int evensAndOdds(char *);
 int thinking();
-int diceShowdown();
+int diceShowdown(char *);
 int isEven(int a);
 int rollDie(int);
 
