@@ -18,7 +18,7 @@ int isInt(char []);
 int charToInt(char b);
 int strToInt(char [], int );
 int powerCal(int, int );
-char *extractName(char [], int );
+char *extractName(char [], int, char[] );
 int rockPaperScissor();
 int evensAndOdds(char *);
 int thinking(char *);
@@ -214,7 +214,7 @@ void miniGames(char fileName[], int noOfNames)
 		
 	}
 
-char *extractName(char b[], int a, char[] compName)
+char *extractName(char b[], int a, char compName[])
 	{
 	ifstream inFile;
 	inFile.open(b , ios::in);
