@@ -120,15 +120,15 @@ int menu()
 
 void miniGames(char fileName[], int noOfNames)
 	{
-	char *compName; 
+	char [30] compName; 
 	if(noOfNames!= 0)
 		{
-		compName = extractName(fileName, noOfNames);  
+		compName = extractName(fileName, noOfNames, compName);  
 		}
 	else 
 		{
 		char defFile[30] = "random_names.txt";
-		compName = extractName(defFile, 100);;
+		compName = extractName(defFile, 100, compName);;
 		noOfNames = 100;
 		}
 
@@ -214,17 +214,16 @@ void miniGames(char fileName[], int noOfNames)
 		
 	}
 
-char *extractName(char b[], int a)
+char *extractName(char b[], int a, char[] compName)
 	{
 	ifstream inFile;
-	char c[30];
 	inFile.open(b , ios::in);
 	int lineNum = randomInRange(1, a);
 	while(--lineNum)
 		{
-		getline(inFile, c);
+		inFile>>compName;
 		}
-	return c;
+	return compName;
 	}
 
 
