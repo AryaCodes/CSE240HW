@@ -120,7 +120,7 @@ int menu()
 
 void miniGames(char fileName[], int noOfNames)
 	{
-	char [30] compName; 
+	char compName[30] = " "; 
 	if(noOfNames!= 0)
 		{
 		compName = extractName(fileName, noOfNames, compName);  
