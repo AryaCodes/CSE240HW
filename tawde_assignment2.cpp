@@ -120,15 +120,16 @@ int menu()
 
 void miniGames(char fileName[], int noOfNames)
 	{
-	char compName[30] = " "; 
+	char reserve[30];
+	char *compName = reserve; 
 	if(noOfNames!= 0)
 		{
-		&compName = extractName(fileName, noOfNames, compName);  
+		compName = extractName(fileName, noOfNames, compName);  
 		}
 	else 
 		{
 		char defFile[30] = "random_names.txt";
-		&compName = extractName(defFile, 100, compName);;
+		compName = extractName(defFile, 100, compName);;
 		noOfNames = 100;
 		}
 
