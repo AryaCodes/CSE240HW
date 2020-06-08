@@ -218,7 +218,7 @@ char *extractName(char b[], int a)
 	{
 	ifstream inFile;
 	char c[30];
-	inFile.open(b , ios::in)
+	inFile.open(b , ios::in);
 	int lineNum = randomInRange(1, a);
 	while(--lineNum)
 		{
