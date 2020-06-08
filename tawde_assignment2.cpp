@@ -124,6 +124,7 @@ void miniGames(char fileName[], int noOfNames)
 	char *compName = reserve; 
 	if(noOfNames!= 0)
 		{
+		cout<< noOfNames<< endl;
 		compName = extractName(fileName, noOfNames, compName);  
 		}
 	else 
