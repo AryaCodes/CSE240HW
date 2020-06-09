@@ -276,9 +276,10 @@ char *extractName(char fileName[], int a, char compName[])
 	ifstream inFile;
 	inFile.open(fileName , ios::in);	//Opens filestream in read mode.
 	int lineNum = randomInRange(1, a);
-	while(lineNum--)
+	while(lineNum)
 		{
 		inFile>>compName;
+		lineNum--;
 		}
 	return compName;
 	}
