@@ -210,7 +210,9 @@ void miniGames(char fileName[], int noOfNames)
 		
 		break;
 		}
-	
+
+	cout<<"\t\t\tLet the Games Commence!!!"<< endl;	
+
 	//The game loop. The first three variables keep a track of round and score, fourth ramdomises the round, temp is temporary use.
 		
 	int round = 1;
