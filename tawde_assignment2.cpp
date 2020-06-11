@@ -224,11 +224,11 @@ void macrosVFunction()
 	cout<< "Let us put the two techniques to the test"<< endl;
 	int num1 = 10; int num2 = 17;
 	cout<<"num1 and num2 are inititalised before every call to 10 and 17 respectively"<< endl;
-	cout<<"Subtracting 10 from 17"<< endl;
+	cout<<"Subtracting num2 from num1"<< endl;
 	cout<<"Function: " << subf(num1, num2)<< endl;
 	num1 = 10; num2 =17;
 	cout<<"Macros:   " <<sub_macro(num1, num2)<< endl;
-	cout<<"Subtracting num1++ from num2--"<< endl;
+	cout<<"Subtracting num2-- from num1++"<< endl;
 	num1 = 10; num2 =17;
 	cout<<"Function: " << subf(num1++, num2--)<< endl;
 	num1 = 10; num2 =17;
@@ -325,7 +325,7 @@ int powerCal(int base, int power)
 
 int rockPaperScissor()
 	{	
-	cout<<"Rock, Paper, Scissors game!"<< endl;	
+	cout<<endl<<"Rock, Paper, Scissors game!"<< endl;	
 	while(true)
 		{
 		cout<< "Choose a throw!"<< endl;
@@ -411,7 +411,7 @@ int rockPaperScissor()
 	}
 int evensAndOdds(char *compName)
 	{
-	cout<< "Even/Odd Game"<< endl;
+	cout<<endl<< "Even/Odd Game"<< endl;
 	
 	int choice;
 	int playerNum;
@@ -479,7 +479,7 @@ int evensAndOdds(char *compName)
 	}
 int thinking(char *compName)
 	{
-	cout<< "Number Guessing Game!"<< endl;
+	cout<<endl<< "Number Guessing Game!"<< endl;
 	cout<<"Player I'm Thinking of a number in the range 1 to 60."<< endl;
 	cout<<"You have 5 guesses!"<< endl;
 	int guess;
@@ -515,7 +515,7 @@ int thinking(char *compName)
 	}
 int diceShowdown(char *compName)
 	{
-	cout<<"Dice Roll ShowDown!"<< endl;
+	cout<<endl<<"Dice Roll ShowDown!"<< endl;
 	int sides;
 	int noOfDie, noOfDieCp;
 	int playerTotal = 0;
