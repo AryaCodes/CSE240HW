@@ -276,7 +276,6 @@ int rockPaperScissor()
 	while(true)
 		{
 		cout<< "Choose a throw!"<< endl;
-		cout<< "1.Rock"<< endl << "2.Paper"<< endl << "3.Scissor"<< endl;
 		int choice;
 		while(true)
 			{
@@ -427,8 +426,38 @@ int evensAndOdds(char *compName)
 	}
 int thinking(char *compName)
 	{
-	cout<<"In thinking"<< endl;
-	return 1;
+	cout<< "Number Guessing Game!"<< endl;
+	cout<<"Player I'm Thinking of a number in the range 1 to 60."<< endl;
+	cout<<"You have 5 guesses!"<< endl;
+	int guess;
+	int compNum = randomInRange(1,60);
+	int guessNo = 1;
+	while(guessNo<6)
+		{
+		cout<< "What's guess #"<< guessNo<< "? ";
+		if(cin.fail())
+			{
+			cin.clear();
+			cin.ignore(100, '\n');
+			cout<< "Enter a number only please;<< endl;
+			continue;
+			}
+		if(guess==choice)
+			break;
+		if(compNum>guess)
+			cout<<"The number I'm thinking of is higher."<<endl;
+		else									
+			cout<<"The number I'm thinking of is lower."<< endl;
+		guessNo++;		
+		}
+	if(guess==choice)
+		{
+		cout<< "You guessed correctly...Congratulations on winning human."<< endl;
+		return 1;		
+		}
+	else
+		cout<< "The number I was thinking of was "<< compNum << ". I win!"<< endl;
+		return 0;
 	}
 int diceShowdown(char *compName)
 	{
