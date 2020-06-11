@@ -131,7 +131,7 @@ void miniGames(char fileName[], int noOfNames)
 		noOfNames = 100;
 		}
 
-	cout<< "Welcome to CSE240 Mini-Game Collection!"<< endl;
+	cout<< endl<< "Welcome to CSE240 Mini-Game Collection!"<< endl;
 	cout<< "I am your opponent " << compName << "."<< endl;
 	
 	int noOfRounds = 0;
@@ -173,7 +173,7 @@ void miniGames(char fileName[], int noOfNames)
 		
 	while(true)
 		{
-		cout<<"Player Score: " << playerScore << "\t\tComp Score: " << compScore<< endl;
+		cout<<endl<<"Player Score: " << playerScore << "\t\tComp Score: " << compScore<< endl;
 		cout<<"Round " << round << endl;
 		
 		randomGame = randomInRange(1,4);
