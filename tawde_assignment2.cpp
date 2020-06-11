@@ -173,7 +173,7 @@ void miniGames(char fileName[], int noOfNames)
 		
 	while(true)
 		{
-		cout<<endl<<"Player Score: " << playerScore << "\t\tComp Score: " << compScore<< endl;
+		cout<<endl<<endl<<"Player Score: " << playerScore << "\t\tComp Score: " << compScore<< endl;
 		cout<<"Round " << round << endl;
 		
 		randomGame = randomInRange(1,4);
@@ -202,12 +202,12 @@ void miniGames(char fileName[], int noOfNames)
 
 	if(playerScore>compScore)
 		{
-		cout<<"Player Score: " << playerScore << "\tComp Score: " << compScore<< endl;
+		cout<<endl<<"Player Score: " << playerScore << "\tComp Score: " << compScore<< endl;
 		cout<< "Player has won the mini-games! Time to celebrate?" << endl<< endl;
 		}
 	else
 		{
-		cout<<"Player Score: " << playerScore << "\tComp Score: " << compScore<< endl;
+		cout<<endl<<"Player Score: " << playerScore << "\tComp Score: " << compScore<< endl;
 		cout<< compName<< " has won the mini-games! I will sleep a happy AI tonight!" << endl<< endl;
 		}
 		
