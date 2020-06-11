@@ -488,6 +488,7 @@ int thinking(char *compName)
 	while(guessNo<6)
 		{
 		cout<< "What's guess #"<< guessNo<< "? ";
+		cin>> guess;
 		if(cin.fail())
 			{
 			cin.clear();
