@@ -3,6 +3,11 @@
 #include<fstream>
 #include<iostream>
 
+#define sub_macro(a,b) ((a)-(b))
+#define cube_macro(r) ((r)*(r)*(r))
+#define min_macro(a,b) (((a)<(b))? (a) : (b))
+#define odd_macro(a) (((a)%2)==0 ? 0 : 1)
+ 
 using namespace std;
 
 int menu();
@@ -20,6 +25,11 @@ int thinking(char *);
 int diceShowdown(char *);
 int isEven(int a);
 int rollDie(int);
+int subf(int , int );
+int cubef(int);
+int minf(int , int);
+int oddf(int );
+
 
 int main(int argc, char* argv[])
 	{
@@ -210,7 +220,50 @@ char *extractName(char b[], int a)
 
 
 void macrosVFunction()
-{cout<<"In Macros rolling d6:" << endl;}
+	{
+	cout<< "Let us put the two techniques to the test"<< endl;
+	int num1 = 10; int num2 = 17;
+	cout<<"num1 and num2 are inititalised before every call to 10 and 17 respectively"<< endl;
+	cout<<"Subtracting 10 from 17"<< endl;
+	cout<<"Function: " << subf(num1, num2)<< endl;
+	num1 = 10; num2 =17;
+	cout<<"Macros:   " <<sub_macro(num1, num2)<< endl;
+	cout<<"Subtracting num1++ from num2--"<< endl;
+	num1 = 10; num2 =17;
+	cout<<"Function: " << subf(num1++, num2--)<< endl;
+	num1 = 10; num2 =17;
+	cout<<"Macros:   " <<sub_macro(num1++, num2--)<< endl;
+	cout<<"Cubing num1."<< endl;
+	num1 = 10; num2 =17;
+	cout<<"Function: " << cubef(num1)<< endl;
+	num1 = 10; num2 =17;
+	cout<<"Macros:   " <<cube_macro(num1)<< endl;
+	cout<<"Cubing --num1."<< endl;
+	num1 = 10; num2 =17;
+	cout<<"Function: " << cubef(--num1)<< endl;
+	num1 = 10; num2 =17;
+	cout<<"Macros:   " <<cube_macro(--num1)<< endl;
+	cout<<"Minimum of num1 and num2."<<endl;
+	num1 = 10; num2 =17;
+	cout<<"Function: " << minf(num1, num2)<< endl;
+	num1 = 10; num2 =17;
+	cout<<"Macros:   " <<min_macro(num1, num2)<< endl;
+	cout<<"Minimum of --num1 and --num2"<< endl;
+	num1 = 10; num2 =17;
+	cout<<"Function: " << minf(--num1, --num2)<< endl;
+	num1 = 10; num2 =17;
+	cout<<"Macros:   " <<min_macro(--num1, --num2)<< endl;
+	cout<<"Checking if num1 is odd(1 if odd 0 if even)"<< endl;
+	num1 = 10; num2 =17;
+	cout<<"Function: " << oddf(num1)<< endl;
+	num1 = 10; num2 =17;
+	cout<<"Macros:   " <<odd_macro(num1)<< endl;
+	cout<<"Checking if num1++ is odd(1 if odd 0 if even)"<< endl;
+	num1 = 10; num2 =17;
+	cout<<"Function: " << oddf(num1++)<< endl;
+	num1 = 10; num2 =17;
+	cout<<"Macros:   " <<odd_macro(num1++)<< endl;
+	}
 
 int randomInRange(int min, int max)
 	{
@@ -560,4 +613,27 @@ int isEven(int a)
 int rollDie(int sides)
 	{
 	return randomInRange(1, sides);
+	}
+
+int subf(int a, int b)
+	{
+	return a-b;
+	}
+int cubef(int a)
+	{
+	return a*a*a;
+	}
+int minf(int a, int b)
+	{
+	if(a<=b)
+		return a;
+	else
+		return b;
+	}
+int oddf(int a)
+	{
+	if(a%2 == 0)
+		return 0;
+	else 
+		return 1;	
 	}
