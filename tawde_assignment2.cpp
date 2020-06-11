@@ -492,10 +492,10 @@ int thinking(char *compName)
 			{
 			cin.clear();
 			cin.ignore(100, '\n');
-			cout<< "Enter a number only please;<< endl;
+			cout<< "Enter a number only please."<< endl;
 			continue;
 			}
-		if(guess==choice)
+		if(guess==compNum)
 			break;
 		if(compNum>guess)
 			cout<<"The number I'm thinking of is higher."<<endl;
@@ -503,7 +503,7 @@ int thinking(char *compName)
 			cout<<"The number I'm thinking of is lower."<< endl;
 		guessNo++;		
 		}
-	if(guess==choice)
+	if(guess==compNum)
 		{
 		cout<< "You guessed correctly...Congratulations on winning human."<< endl;
 		return 1;		
