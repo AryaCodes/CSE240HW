@@ -360,7 +360,7 @@ void printLand(char** land, int width, int height)
         {
             for(int temp2 = 0; temp2<width; temp2++)
             {
-                cout<< BBLU(land[temp][temp2]);
+                cout<< BBLUFBLA(land[temp][temp2]);
             }
             cout<< endl;
         }
