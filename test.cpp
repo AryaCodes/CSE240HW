@@ -17,7 +17,7 @@ Description: This program consists of an application of functions in order to im
 using namespace std;  //Since we will be using the namespace a lot.
 
 #define RST "\x1B[0m"
-#define BBLU(x) "\x1B[94m" << x << RST
+#define BBLU(x) "\x1B[104m" << x << RST
 
 //Function Initial Declarations
 int isIntInValid(int, int, int);
