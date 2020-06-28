@@ -16,8 +16,13 @@ Description: This program consists of an application of functions in order to im
 
 using namespace std;  //Since we will be using the namespace a lot.
 
+
 #define RST "\x1B[0m"
 #define BBLU(x) "\x1B[104m" << x << RST
+#define BGRN(x) "\x1B[102m" << x << RST
+#define DGRN(x) "\x1B[42m" << x << RST
+#define BMAG(x) "\x1B[105m" << x << RST
+#define BYEL(x) "\x1B[103m" << x << RST
 
 //Function Initial Declarations
 int isIntInValid(int, int, int);
@@ -360,7 +365,27 @@ void printLand(char** land, int width, int height)
         {
             for(int temp2 = 0; temp2<width; temp2++)
             {
-                cout<< BBLU(land[temp][temp2]);
+                switch(land(temp)(temp2))
+                {
+                case 'R':
+                    cout<< BGRN(land(temp)(temp2));
+                    break;
+                case 'F':
+                    cout<< DGRN(land(temp)(temp2));
+                    break;
+                case 'T':
+                    cout<< BYEL(land(temp)(temp2));
+                    break;
+                case 'C':
+                    cout<< BMAG(land(temp)(temp2));
+                    break;
+                case 'M':
+                    cout<< land(temp)(temp2);
+                    break;
+                case 'W':
+                    cout<< BBLU(land(temp)(temp2));
+                    break;
+                }
             }
             cout<< endl;
         }
