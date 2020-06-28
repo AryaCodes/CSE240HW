@@ -18,7 +18,7 @@ using namespace std;  //Since we will be using the namespace a lot.
 
 #define RST "\x1B[0m"
 #define BBLU(x) "\x1B[34m" << x << RST
-#define BGRNFBLA(x) "\x1B[40;34m" << x << RST
+#define BGRNFBLA(x) "\x1B[30;44m" << x << RST
 //Function Initial Declarations
 int isIntInValid(int, int, int);
 void normalMode();
