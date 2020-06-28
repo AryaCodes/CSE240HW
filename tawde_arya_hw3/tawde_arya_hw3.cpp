@@ -391,7 +391,7 @@ void printLand(char** land, int width, int height)
                     cout<< termcolor::on_green<< termcolor::grey << land[temp][temp2];
                     break;
                 case 'T':
-                    cout<< termcolor::on_yellow<< termcolor::white << land[temp][temp2];
+                    cout<< termcolor::on_yellow<< termcolor::grey << land[temp][temp2];
                     break;
                 case 'C':
                     cout<< termcolor::on_magenta<< termcolor::yellow << land[temp][temp2];
