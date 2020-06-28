@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1593291419 source:c:\users\manish\desktop\summer semester 1\cse240\git\assignment3\main.cpp
+	<cstdlib>
+	<ctime>
+	<fstream>
+	<iostream>
+

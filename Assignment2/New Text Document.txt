@@ -1,0 +1,23 @@
+Checks for menu:
+If input is not integer remember to clear error flag.
+Ignore extra inputs and always ignore to clear buffer so that the program doesnt operate multiple times
+
+Randomizer:
+Make sure numbers are truly pseudo-random
+Declare srand at the very beginning (Never in Loop)
+Ever subsequent rand() will then be different... however if we 
+declare srand over and over if the program operates fast enough there is a chance
+that numbers repeat due to the one second precision of srand.
+
+
+//	char arr1[20];
+//	cin >> arr1;
+//	cin.ignore(100, '\n');
+//	int x = isInt(arr1);
+//	if(x==0)
+//		cout<< "Please enter an integer" << endl;
+//	else
+//		{
+//		int y = (strToInt(arr1, x) + 1);
+//		cout << y << endl;
+//		}
