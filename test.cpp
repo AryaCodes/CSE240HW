@@ -365,25 +365,25 @@ void printLand(char** land, int width, int height)
         {
             for(int temp2 = 0; temp2<width; temp2++)
             {
-                switch(land(temp)(temp2))
+                switch(land[temp]([temp2])
                 {
                 case 'R':
-                    cout<< BGRN(land(temp)(temp2));
+                    cout<< BGRN(land[temp][temp2]);
                     break;
                 case 'F':
-                    cout<< DGRN(land(temp)(temp2));
+                    cout<< DGRN(land[temp][temp2]);
                     break;
                 case 'T':
-                    cout<< BYEL(land(temp)(temp2));
+                    cout<< BYEL(land[temp][temp2]);
                     break;
                 case 'C':
-                    cout<< BMAG(land(temp)(temp2));
+                    cout<< BMAG(land[temp][temp2]);
                     break;
                 case 'M':
-                    cout<< land(temp)(temp2);
+                    cout<< land[temp][temp2];
                     break;
                 case 'W':
-                    cout<< BBLU(land(temp)(temp2));
+                    cout<< BBLU(land[temp][temp2]);
                     break;
                 }
             }
