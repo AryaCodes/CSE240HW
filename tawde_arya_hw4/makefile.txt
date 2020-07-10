@@ -1,2 +1,5 @@
-SOURCES = main.cpp tawde_list.cpp
-g++ -g -Wall -o main $(SOURCES)
+all: main
+
+CXXFLAGS+=-g -Wall
+LDLIBS+=-lstdc++
+main: tawde_list.o main.o
