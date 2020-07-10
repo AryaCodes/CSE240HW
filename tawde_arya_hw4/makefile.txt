@@ -1,2 +1,2 @@
 main: main.cpp tawdelist.hpp
-    g++ -g -o main main.cpp tawdelist.hpp
+    g++ -g -o main main.cpp tawde_list.hpp
