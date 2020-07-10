@@ -368,6 +368,7 @@ void printLand(char** land, int width, int height)
                 switch(land[temp]([temp2])
                 {
                 case 'R':
+		
                     cout<< BGRN(land[temp][temp2]);
                     break;
                 case 'F':

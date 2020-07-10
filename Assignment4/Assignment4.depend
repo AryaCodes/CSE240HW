@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1594392610 source:c:\users\manish\desktop\summer semester 1\cse240\git\assignment4\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	"tawde_list.hpp"
+
+1594392306 c:\users\manish\desktop\summer semester 1\cse240\git\assignment4\tawde_list.hpp
+
+1594391069 c:\users\manish\desktop\summer semester 1\cse240\git\assignment4\zombie.hpp
+	<cstdlib>
+	<ctime>
+	"tawde_list.hpp"
+
