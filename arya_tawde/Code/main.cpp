@@ -34,8 +34,8 @@ int main(int argc, char *argv[])
     streambuf *cinbuf  = cin.rdbuf();
 
     //Creating the streams for redirection to files
-    ofstream out(outputfile);
-    ifstream in(inputfile);
+    ofstream out("arya.txt");
+    ifstream in("tree.txt");
 
     //Redirecting cin and cout to the file streams
     cin.rdbuf(in.rdbuf());
