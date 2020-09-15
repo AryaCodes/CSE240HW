@@ -20,19 +20,14 @@ int main(int argc, char *argv[])
 
     int b = filenames.find('>');
 
-    cout<< b <<endl;
-
     string inputfile = filenames.substr(1,b-1);
     string outputfile = filenames.substr(b+1, filenames.length());
 
-    cout<< inputfile<< endl<< outputfile<< endl;
-
     if(a == "insertion")
-        {choice = 1;
-        cout<<"insertion"<< endl;}
+        choice = 1;
     else
-        {choice = 0;
-        cout<<"quick"<< endl;}
+        choice = 0;
+
 
     // Saving the original pointers to cin and cout
     streambuf *coutbuf = cout.rdbuf();
@@ -44,7 +39,7 @@ int main(int argc, char *argv[])
 
     //Redirecting cin and cout to the file streams
     cin.rdbuf(in.rdbuf());
-    //cout.rdbuf(out.rdbuf());
+    cout.rdbuf(out.rdbuf());
 
     string input;
 
@@ -57,7 +52,6 @@ int main(int argc, char *argv[])
             insertionsort(stringarray, insize);
         else
             quicksort(stringarray, 0, insize-1);
-
 
         int x= 0;
         while(x<insize)
@@ -95,7 +89,7 @@ int main(int argc, char *argv[])
 
             z++ ;
         }
-        cout<<counter<< check;
+        cout<<counter<< check<<endl;
 
         delete stringarray;
     }
