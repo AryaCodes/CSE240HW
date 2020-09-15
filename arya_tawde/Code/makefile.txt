@@ -1,2 +1,2 @@
-encode: main.cpp
-	g++ -g -o encode main.cpp 
+main: main.cpp
+	g++ -g -o main main.cpp 
